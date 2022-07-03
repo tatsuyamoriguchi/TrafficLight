@@ -15,13 +15,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-LS-TMv">
+                                <rect key="frame" x="142.5" y="321" width="129" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="ebY-gX-bcn"/>
+                                    <constraint firstAttribute="width" constant="129" id="vJD-Tc-eit"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1w-Xe-jva">
+                                <rect key="frame" x="143" y="583" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="N2h-sy-wtI"/>
+                                    <constraint firstAttribute="width" constant="128" id="NCQ-34-7z4"/>
+                                </constraints>
+                                <state key="normal" title="Start Traffic Lights"/>
+                                <connections>
+                                    <action selector="startPressedOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJs-rV-r50"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hod-LS-TMv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0yD-b9-eyT"/>
+                            <constraint firstItem="Hod-LS-TMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nsd-yW-TTa"/>
+                            <constraint firstItem="d1w-Xe-jva" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLC-aB-xcF"/>
+                            <constraint firstItem="d1w-Xe-jva" firstAttribute="top" secondItem="Hod-LS-TMv" secondAttribute="bottom" constant="8" id="zZs-hC-KTa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="trafficLightImage" destination="Hod-LS-TMv" id="UFC-fX-weD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-984" y="93"/>
+            <point key="canvasLocation" x="-984.05797101449286" y="92.410714285714278"/>
         </scene>
     </scenes>
     <resources>
