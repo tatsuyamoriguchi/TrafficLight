@@ -1,5 +1,5 @@
 //
-//  LogTableViewController.swift
+//  TrafficLightTableViewController.swift
 //  TrafficLight
 //
 //  Created by Tatsuya Moriguchi on 7/2/22.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class LogTableViewController: UITableViewController {
+class TrafficLightTableViewController: UITableViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,8 @@ class LogTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
