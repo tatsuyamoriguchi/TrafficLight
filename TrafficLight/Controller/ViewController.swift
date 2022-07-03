@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ViewController: UIViewController {
     
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
             self.trafficLightImage.image = UIImage(imageLiteralResourceName: "green.png")
 
             AccessData().createItem(event: "Light Changed - Green")
+            
             // Debugging purpose.
             print("green light")
             print(Date())

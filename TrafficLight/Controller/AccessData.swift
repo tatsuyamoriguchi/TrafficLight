@@ -7,18 +7,25 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 
 class AccessData {
+    
+    var models = [TrafficLightHistory]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     func getAllItems() {
         do {
-            let items = try context.fetch(TrafficLightHistory.fetchRequest())
+            models = try context.fetch(TrafficLightHistory.fetchRequest())
+            DispatchQueue.main.async {
+                TrafficLightTableViewController().tableView.reloadData()
+            }
 
         } catch {
             print(error)
+            
         }
     }
     

@@ -6,14 +6,50 @@
 //
 
 import UIKit
+import CoreData
+
 
 class TrafficLightTableViewController: UITableViewController {
+    
+//    var models = [TrafficLightHistory]()   //[TrafficLightHistory]()
+    
+//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//
+//    func getAllItems() {
+//        do {
+//            models = try context.fetch(TrafficLightHistory.fetchRequest())
+//            DispatchQueue.main.async {
+//                TrafficLightTableViewController().tableView.reloadData()
+//            }
+//
+//        } catch {
+//            print(error)
+//            
+//        }
+//    }
+//    
+//    
+//    public func createItem(event: String) {
+//        let newItem = TrafficLightHistory(context: context)
+//        newItem.event = event
+//        newItem.time = Date()
+//        
+//        do {
+//            try context.save()
+//        } catch {
+//            print(error)
+//        }
+//        
+//    }
 
     
+    let access = AccessData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        access.getAllItems()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,25 +61,26 @@ class TrafficLightTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 10
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return access.models.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let model = access.models[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = model.event
+//        cell.textLabel?.
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
