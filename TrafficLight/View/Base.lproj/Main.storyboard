@@ -34,22 +34,12 @@
                                     <action selector="startPressedOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJs-rV-r50"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftw-Bf-bOC">
-                                <rect key="frame" x="144" y="628" width="126" height="30"/>
-                                <state key="normal" title="Stop Traffic Lights"/>
-                                <connections>
-                                    <action selector="stopPressedOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Rv-hM-8hb"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hod-LS-TMv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0yD-b9-eyT"/>
-                            <constraint firstItem="Ftw-Bf-bOC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="JKk-Sk-WE7"/>
                             <constraint firstItem="Hod-LS-TMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nsd-yW-TTa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ftw-Bf-bOC" secondAttribute="trailing" constant="144" id="aUg-T5-kO0"/>
-                            <constraint firstItem="Ftw-Bf-bOC" firstAttribute="top" secondItem="d1w-Xe-jva" secondAttribute="bottom" constant="15" id="csF-My-als"/>
                             <constraint firstItem="d1w-Xe-jva" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLC-aB-xcF"/>
                             <constraint firstItem="d1w-Xe-jva" firstAttribute="top" secondItem="Hod-LS-TMv" secondAttribute="bottom" constant="8" id="zZs-hC-KTa"/>
                         </constraints>
@@ -78,17 +68,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="NVu-wn-j95" style="IBUITableViewCellStyleDefault" id="Eia-R8-8V6">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="NVu-wn-j95" detailTextLabel="f1T-C8-oW7" style="IBUITableViewCellStyleSubtitle" id="Eia-R8-8V6">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eia-R8-8V6" id="CYB-S4-3yK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NVu-wn-j95">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1T-C8-oW7">
+                                            <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

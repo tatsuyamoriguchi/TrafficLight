@@ -50,11 +50,6 @@ class TrafficLightTableViewController: UITableViewController {
 
         access.getAllItems()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     
@@ -76,7 +71,15 @@ class TrafficLightTableViewController: UITableViewController {
         let model = access.models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.event
-//        cell.textLabel?.
+        
+        var timeString: String = ""
+        if model.time != nil {
+            timeString = Helper().date2String(date: model.time!)
+        } else {
+            timeString = "No time data available"
+        }
+        cell.detailTextLabel?.text = timeString
+
 
         return cell
     }

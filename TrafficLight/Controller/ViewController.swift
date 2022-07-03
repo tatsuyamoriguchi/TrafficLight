@@ -13,88 +13,47 @@ class ViewController: UIViewController {
     
     // Properties
     let access = AccessData()
- 
-//    weak var greenTimer: Timer? = nil
-//    weak var yellowTimer: Timer? = nil
-//    weak var redTimer: Timer? = nil
     weak var timer: Timer?
-
-    
-    
-    
     @IBOutlet weak var trafficLightImage: UIImageView!
-
-    
-    var workItem: DispatchWorkItem?
-
-
-    @IBAction func stopPressedOn(_ sender: Any) {
-        // Add code to delete and refresh previous timer processes
-//        greenTimer?.invalidate()
-//        greenTimer = nil
-//        yellowTimer?.invalidate()
-//        yellowTimer = nil
-//        redTimer?.invalidate()
-//        redTimer = nil
-//        timer?.invalidate()
-//        timer = nil
-    
-
-        workItem?.cancel()
-
-        
-        print("stop button pressed")
-        print(Date())
-
-    }
-
-    
- 
     
     // Button to start/restart traffic light cycle
     @IBAction func startPressedOn(_ sender: Any) {
-
-        workItem = DispatchWorkItem { self.trafficLights() }
-        guard (workItem != nil) else { return }
-
         
         print("start/restart button pressed")
         print(Date())
         
-        // Add code to delete and refresh previous timer processes
-        
         var counter = 0
-        let max = 4
-
+        // Set the max number of loop
+        let max = 100
+        
         access.createItem(event: "Start/Restart Pressed")
-
+        
         // Continuously loop trafficLights() till the counter gets to max
         while true {
-
             
-//            if counter == 0 {
-//                self.trafficLights()
-//            } else {
-                // Schedule each function call ahead everytime it loops.
-                // But why counter * 10 instead of counter * 11???
-                // green: 5 seconds, yellow 2 seconds, red 4 seconds
-                // One loop total time is 11 seconds
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(counter * 10), execute: workItem!)
-
+            timer?.invalidate()
+            timer = nil
+            
+            // Schedule each function call ahead everytime it loops.
+            // But why counter * 10 instead of counter * 11???
+            // green: 5 seconds + yellow 2 seconds + red 4 seconds = 11 
+            // The total seconds of one loop is 11 seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(counter * 10)) {
+                self.trafficLights()
+            }
+            
             counter += 1
+            
             // break when the counter reaches to max
             // to avoid endless loop
+            // if endless loop is required, remove the code below
             if counter == max {
-                
-                // Debugging purpose.
-                print("counter reached to max.")
- 
                 break
             }
-
+            
         }
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,40 +65,33 @@ class ViewController: UIViewController {
     
     
     func trafficLights() {
-
-//        self.greenTimer?.invalidate()
-//        self.greenTimer = nil
-//        self.yellowTimer?.invalidate()
-//        self.yellowTimer = nil
-//        self.redTimer?.invalidate()
-//        self.redTimer = nil
-
+        
         guard timer == nil else { return }
         
         timer = Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { timer in
             self.trafficLightImage.image = UIImage(imageLiteralResourceName: "green.png")
-
+            
             self.access.createItem(event: "Light Changed - Green")
             
             // Debugging purpose.
-            print("green light")
-            print(Date())
+//            print("green light")
+//            print(Date())
         }
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
             self.trafficLightImage.image = UIImage(imageLiteralResourceName: "yellow.png")
             
             self.access.createItem(event: "Light Changed - Yellow")
             // Debugging purpose.
-            print("yellow light")
-            print(Date())
+//            print("yellow light")
+//            print(Date())
         }
         timer = Timer.scheduledTimer(withTimeInterval: 7, repeats: false) { timer in
             self.trafficLightImage.image = UIImage(imageLiteralResourceName: "red.png")
             
             self.access.createItem(event: "Light Changed - Red")
             // Debugging purpose.
-            print("red light")
-            print(Date())
+//            print("red light")
+//            print(Date())
         }
         
     }
