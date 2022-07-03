@@ -14,6 +14,7 @@
 		8C53EBD3286D6BBF00D93076 /* TrafficLight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C53EBD1286D6BBF00D93076 /* TrafficLight.xcdatamodeld */; };
 		8C53EBD5286D6BC100D93076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C53EBD4286D6BC100D93076 /* Assets.xcassets */; };
 		8C53EBD8286D6BC100D93076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C53EBD6286D6BC100D93076 /* LaunchScreen.storyboard */; };
+		8C7C211C28715E0C006C51C4 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C211B28715E0C006C51C4 /* LogTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8C53EBD4286D6BC100D93076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C53EBD7286D6BC100D93076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C53EBD9286D6BC100D93076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C7C211B28715E0C006C51C4 /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8C53EBCA286D6BBF00D93076 /* SceneDelegate.swift */,
 				8C53EBCC286D6BBF00D93076 /* ViewController.swift */,
 				8C53EBCE286D6BBF00D93076 /* Main.storyboard */,
+				8C7C211B28715E0C006C51C4 /* LogTableViewController.swift */,
 				8C53EBD4286D6BC100D93076 /* Assets.xcassets */,
 				8C53EBD6286D6BC100D93076 /* LaunchScreen.storyboard */,
 				8C53EBD9286D6BC100D93076 /* Info.plist */,
@@ -142,6 +145,7 @@
 			files = (
 				8C53EBD3286D6BBF00D93076 /* TrafficLight.xcdatamodeld in Sources */,
 				8C53EBCD286D6BBF00D93076 /* ViewController.swift in Sources */,
+				8C7C211C28715E0C006C51C4 /* LogTableViewController.swift in Sources */,
 				8C53EBC9286D6BBF00D93076 /* AppDelegate.swift in Sources */,
 				8C53EBCB286D6BBF00D93076 /* SceneDelegate.swift in Sources */,
 			);
