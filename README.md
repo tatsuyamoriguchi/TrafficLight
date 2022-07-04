@@ -35,6 +35,7 @@ example:
     * Add unit tests 😉 
     
     
-### Xcode Simulator Screen Recording
-https://youtu.be/8aP1lI9YOuM   
-    
+### Xcode Simulator Screen Recording 
+https://user-images.githubusercontent.com/25876806/177080857-9652ca55-6a31-4e84-b317-0bda8f612c4c.mov
+
+
