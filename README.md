@@ -33,3 +33,8 @@ example:
 
 * Bonus (not required)
     * Add unit tests 😉 
+    
+    
+    ##Xcode Simulator Screen Recording
+    https://youtu.be/8aP1lI9YOuM
+    
