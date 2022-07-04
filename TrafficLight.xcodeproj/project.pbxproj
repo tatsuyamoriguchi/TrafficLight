@@ -15,6 +15,7 @@
 		8C53EBD3286D6BBF00D93076 /* TrafficLight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C53EBD1286D6BBF00D93076 /* TrafficLight.xcdatamodeld */; };
 		8C53EBD5286D6BC100D93076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C53EBD4286D6BC100D93076 /* Assets.xcassets */; };
 		8C53EBD8286D6BC100D93076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C53EBD6286D6BC100D93076 /* LaunchScreen.storyboard */; };
+		8C6BCBE02872A28B004796E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C6BCBDF2872A28B004796E7 /* README.md */; };
 		8C7C21272871657D006C51C4 /* TrafficLightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C21262871657D006C51C4 /* TrafficLightTableViewController.swift */; };
 		8C7C213628717349006C51C4 /* AccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C213528717349006C51C4 /* AccessData.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		8C53EBD4286D6BC100D93076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C53EBD7286D6BC100D93076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C53EBD9286D6BC100D93076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C6BCBDF2872A28B004796E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C7C21262871657D006C51C4 /* TrafficLightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightTableViewController.swift; sourceTree = "<group>"; };
 		8C7C213528717349006C51C4 /* AccessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +50,7 @@
 		8C53EBBC286D6BBF00D93076 = {
 			isa = PBXGroup;
 			children = (
+				8C6BCBDF2872A28B004796E7 /* README.md */,
 				8C53EBC7286D6BBF00D93076 /* TrafficLight */,
 				8C53EBC6286D6BBF00D93076 /* Products */,
 			);
@@ -162,6 +165,7 @@
 			files = (
 				8C53EBD8286D6BC100D93076 /* LaunchScreen.storyboard in Resources */,
 				8C53EBD5286D6BC100D93076 /* Assets.xcassets in Resources */,
+				8C6BCBE02872A28B004796E7 /* README.md in Resources */,
 				8C53EBD0286D6BBF00D93076 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
