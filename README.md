@@ -41,7 +41,3 @@ https://www.youtube.com/embed/8aP1lI9YOuM
 
 https://user-images.githubusercontent.com/25876806/177085129-7fbbe7a7-b941-4c62-8c86-2cba299f41f9.mov
 
-
-<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8aP1lI9YOuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
