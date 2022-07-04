@@ -18,10 +18,11 @@ class ViewController: UIViewController {
     
     // Button to start/restart traffic light cycle
     @IBAction func startPressedOn(_ sender: Any) {
-        
-        print("start/restart button pressed")
-        print(Date())
-        
+                
+        // To fix inconsistant Red light duration
+        timer?.invalidate()
+        timer = nil
+
         var counter = 0
         // Set the max number of loop
         let max = 100
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trafficLightImage.image = UIImage(named: "red.png")
+        //trafficLightImage.image = UIImage(named: "red.png")
         
     }
     
@@ -73,25 +74,17 @@ class ViewController: UIViewController {
             
             self.access.createItem(event: "Light Changed - Green")
             
-            // Debugging purpose.
-//            print("green light")
-//            print(Date())
         }
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
             self.trafficLightImage.image = UIImage(imageLiteralResourceName: "yellow.png")
             
             self.access.createItem(event: "Light Changed - Yellow")
-            // Debugging purpose.
-//            print("yellow light")
-//            print(Date())
+
         }
         timer = Timer.scheduledTimer(withTimeInterval: 7, repeats: false) { timer in
             self.trafficLightImage.image = UIImage(imageLiteralResourceName: "red.png")
             
             self.access.createItem(event: "Light Changed - Red")
-            // Debugging purpose.
-//            print("red light")
-//            print(Date())
         }
         
     }

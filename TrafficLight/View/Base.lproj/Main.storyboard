@@ -98,7 +98,13 @@
                             <outlet property="delegate" destination="DY8-pU-oHT" id="2hV-Gu-Mg0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7d5-A3-g7a"/>
+                    <navigationItem key="navigationItem" id="7d5-A3-g7a">
+                        <barButtonItem key="rightBarButtonItem" title="Delete All" id="vFc-TN-ELe">
+                            <connections>
+                                <action selector="deleteAllButton:" destination="DY8-pU-oHT" id="gDU-aL-rM5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W9-Lh-kfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

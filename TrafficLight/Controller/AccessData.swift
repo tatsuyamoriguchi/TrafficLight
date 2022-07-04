@@ -11,9 +11,9 @@ import CoreData
 
 
 class AccessData {
+    let entity = "TrafficLightHistory"
     
     var models = [TrafficLightHistory]()
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     func getAllItems() {
@@ -39,6 +39,18 @@ class AccessData {
             try context.save()
         } catch {
             print(error)
+        }
+        
+    }
+    
+    func deleteAllItems() {
+
+        let deleteAllRequest = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: entity))
+        do {
+            try context.execute(deleteAllRequest)
+            print("deleteAllItems() was executed.")
+        } catch {
+            print("Delete all data in \(entity) error : ", error)
         }
         
     }
