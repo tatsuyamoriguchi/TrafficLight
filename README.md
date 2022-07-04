@@ -3,6 +3,7 @@
 ## Features: Display traffic lights and log the events
 ### Frameworks and Functions Used:
 1. Core Data
+2. Timer.scheduledTimer
 ### Build Environment
 - MacBook Pro mid-2012
 - macOS Catalina version 10.15.7
